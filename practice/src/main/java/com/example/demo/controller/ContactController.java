@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+@Controller
 public class ContactController {
     @PostMapping("/contact")
     public ModelAndView contact(
@@ -21,14 +22,14 @@ public class ContactController {
     ) {
         mv.setViewName("confirmation");
         mv.addObject("lastName", lastName);
-        mv.addObject("lastName", firstName);
-        mv.addObject("lastName", email);
-        mv.addObject("lastName", phone);
-        mv.addObject("lastName", zipCode);
-        mv.addObject("lastName", address);
-        mv.addObject("lastName", buildingName);
-        mv.addObject("lastName", contactType);
-        mv.addObject("lastName", body);
+        mv.addObject("firstName", firstName);
+        mv.addObject("email", email);
+        mv.addObject("phone", phone);
+        mv.addObject("zipCode", zipCode);
+        mv.addObject("address", address);
+        mv.addObject("buildingName", buildingName);
+        mv.addObject("contactType", contactType);
+        mv.addObject("body", body);
         return mv;
     }
 }
