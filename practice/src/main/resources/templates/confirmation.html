@@ -6,60 +6,60 @@
 </head>
 <body>
     <h1>お問い合わせ内容の確認</h1>
-    <form action="/contact/register" method="post">
+    <form th:action="@{/contact/register}" th:object="${contactForm}" method="post">
         <table border="1">
             <tr>
                 <td>姓</td>
                 <td>
-                    <span th:text="${contactForm.lastName}"></span>
+                    <span th:text="${contactForm.getLastName()}"></span>
                 </td>
             </tr>
             <tr>
                 <td>名</td>
                 <td>
-                    <span th:text="${contactForm.firstName}"></span>
+                    <span th:text="${contactForm.getFirstName()}"></span>
                 </td>
             </tr>
             <tr>
                 <td>メールアドレス</td>
                 <td>
-                    <span th:text="${contactForm.email}"></span>
+                    <span th:text="${contactForm.getEmail()}"></span>
                 </td>
             </tr>
             <tr>
                 <td>電話番号</td>
                 <td>
-                    <span th:text="${contactForm.phone}"></span>
+                    <span th:text="${contactForm.getPhone()}"></span>
                 </td>
             </tr>
             <tr>
                 <td>郵便番号</td>
                 <td>
-                    <span th:text="${contactForm.zipCode}"></span>
+                    <span th:text="${contactForm.getZipCode()}"></span>
                 </td>
             </tr>
             <tr>
                 <td>住所</td>
                 <td>
-                    <span th:text="${contactForm.address}"></span>
+                    <span th:text="${contactForm.getAddress()}"></span>
                 </td>
             </tr>
             <tr>
                 <td>建物名</td>
                 <td>
-                    <span th:text="${contactForm.buildingName}"></span>
+                    <span th:text="${contactForm.getBuildingName()}"></span>
                 </td>
             </tr>
             <tr>
                 <td>お問い合わせ種別</td>
                 <td>
-                    <span th:text="${contactForm.contactType}"></span>
+                    <span th:text="${contactForm.getContactType()}"></span>
                 </td>
             </tr>
             <tr>
                 <td>お問い合わせ内容</td>
                 <td>
-                    <span th:text="${contactForm.body}"></span>
+                    <span th:text="${contactForm.getBody()}"></span>
                 </td>
             </tr>
         </table>

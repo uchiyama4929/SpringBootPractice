@@ -1,0 +1,5 @@
+inquiry:
+  types:
+    technicalQuestions: "技術的なお問い合わせ"
+    services: "サービスに関するお問い合わせ"
+    others: "その他"
